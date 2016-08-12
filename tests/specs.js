@@ -5,7 +5,7 @@ const tweetstorm = require('../src/tweetstorm');
 describe('Tweetstorm', function() {
   context('when given a tweet with less than 140 chars', () => {
     it('should return an array with 1 tweet', () => {
-      const text = 'xxx xxx xxx';
+      const text = ' xxx xxx xxx ';
       const tweet = tweetstorm(text);
 
       expect(tweet).to.eql(['xxx xxx xxx']);
