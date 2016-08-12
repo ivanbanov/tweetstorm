@@ -1,0 +1,20 @@
+{
+  "name": "tweetstorm",
+  "version": "1.0.0",
+  "description": "Split a tweet bigger than 140 chars in mutliple tweets",
+  "main": "index.js",
+  "scripts": {
+    "tests": "./node_modules/mocha/bin/mocha tests --recursive"
+  },
+  "author": "Ivan Banov",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  },
+  "bin": {
+    "tweetstorm": "./index.js"
+  }
+}
