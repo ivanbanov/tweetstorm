@@ -2,7 +2,13 @@ const chai = require('chai');
 const expect = chai.expect;
 const tweetstorm = require('../src/tweetstorm');
 
-describe('Tweetstorm', function() {
+describe('Tweetstorm', () => {
+  context('when given an invalid text', () => {
+    it('should throw an error', () => {
+      expect(() => tweetstorm(text)).to.throw(Error);
+    });
+  });
+
   context('when given a tweet with less than 140 chars', () => {
     it('should return an array with 1 tweet', () => {
       const text = ' xxx xxx xxx ';
