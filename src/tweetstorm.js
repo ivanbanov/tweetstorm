@@ -65,11 +65,9 @@ function getTweets(words = [], index = 1, tweets = []) {
     
     prefix = `${index}/ `;
     tweet = tweetWords.join(' ');
-    
-    const tweetSize = prefix.length + tweet.length;
 
     // Not ready
-    if (nextWord && tweetSize + nextWord.length < MAXCHARS) {
+    if (nextWord && prefix.length + tweet.length + nextWord.length < MAXCHARS) {
       continue;
     }
     
