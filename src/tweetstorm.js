@@ -30,20 +30,6 @@ function tweetstorm(tweet = '') {
 }
 
 /**
- * Normalize the passed tweet to string
- *
- * @param anything that could be converted in a tweet
- * @return {String}
- */
-function normalize(tweet) {
-  try {
-    return tweet.toString();
-  } catch(e) {
-    throw Error('Tweet should be a text.');
-  }
-}
-
-/**
  * Generates an array of strings with prefix
  *
  * @param {Array} Array of words to generate the tweets
@@ -93,6 +79,20 @@ function getTweets(words = [], index = 1, tweets = []) {
   }
 
   return tweets;
+}
+
+/**
+ * Normalize the passed tweet to string
+ *
+ * @param anything that could be converted in a tweet
+ * @return {String}
+ */
+function normalize(tweet) {
+  try {
+    return tweet.toString();
+  } catch(e) {
+    throw Error('Tweet should be a text.');
+  }
 }
 
 /**
