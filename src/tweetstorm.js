@@ -15,9 +15,12 @@ function tweetstorm(tweet = '') {
   // Only 1 word
   if (words.length === 1) {
     const word = words[0];
-    const _ellipsis = ellipsis(word.slice(0, MAXCHARS));
+
+    if (word.length > MAXCHARS) {
+      return [ellipsis(word.slice(0, MAXCHARS))];
+    }
     
-    return [word.length > MAXCHARS ? _ellipsis : word];
+    return word;
   }
 
   // Only 1 tweet
