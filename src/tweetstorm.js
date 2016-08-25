@@ -9,7 +9,7 @@ const MAXCHARS = 140;
  * @return {Array} Array of tweets
  */
 function tweetstorm(tweet = '') {
-  const _tweet = normalize(tweet).trim();
+  const _tweet = normalize(tweet);
   const words = _tweet.split(' ');
   
   // Only 1 word
@@ -89,7 +89,7 @@ function getTweets(words = [], index = 1, tweets = []) {
  */
 function normalize(tweet) {
   try {
-    return tweet.toString();
+    return tweet.toString().trim();
   } catch(e) {
     throw Error('Tweet should be a text.');
   }
