@@ -37,8 +37,8 @@ describe('Tweetstorm', () => {
 
       const expectedText = [
         '1/ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, molestias beatae. Delectus corporis beatae ducimus, culpa, alias labore',
-        `2/ vitae perspiciatis, iure expedita est nemo. Eius officiis velit hic eligendi, consequuntur.`
-      ]
+        '2/ vitae perspiciatis, iure expedita est nemo. Eius officiis velit hic eligendi, consequuntur.',
+      ];
 
       const tweet = tweetstorm(text);
 
@@ -58,7 +58,7 @@ describe('Tweetstorm', () => {
 
       const expectedText = [
         `1/ ${expectedBigWord}...`,
-        `2/ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime`,
+        '2/ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime',
       ]
 
       const tweet = tweetstorm(text);
