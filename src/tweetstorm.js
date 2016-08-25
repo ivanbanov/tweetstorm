@@ -107,8 +107,9 @@ function normalize(tweet) {
 function ellipsis(word = '') {
   const len = word.length;
   const target = len <= 3 ? 0 : len - 3;
+  const slicedWord = word.slice(0, target);
 
-  return word.slice(0, target) + '...';
+  return `${slicedWord}...`;
 }
 
 module.exports = tweetstorm;
