@@ -19,6 +19,8 @@ function tweetstorm(tweet = '') {
     if (word.length > MAXCHARS) {
       return [ellipsis(word.slice(0, MAXCHARS))];
     }
+
+    teste
     
     return word;
   }
